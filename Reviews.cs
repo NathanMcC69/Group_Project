@@ -49,6 +49,8 @@ public class Reviews
         {
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("Product name cannot be empty or null.");
+                if (value.Length > 30)
+            throw new ArgumentException("Review text cannot exceed 30 characters.");
             product = value;
         }
     }
@@ -61,6 +63,8 @@ public class Reviews
         {
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("Customer name cannot be empty or null.");
+                if (value.Length > 50)
+            throw new ArgumentException("Review text cannot exceed 50 characters.");
             customer = value;
         }
     }
@@ -85,6 +89,8 @@ public class Reviews
         {
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("Review text cannot be empty or null.");
+                if (value.Length > 250)
+            throw new ArgumentException("Review text cannot exceed 250 characters.");
             reviewText = value;
         }
     }
